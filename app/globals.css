@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #f7f7f8;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: #101828;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.menu-root {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > a,
+.menu-item > .menu-label {
+  color: #d0d5dd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.menu-item > a:hover,
+.menu-item > .menu-label:hover {
+  color: #fff;
+}
+
+/* Submenu (dropdown) */
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1d2939;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: none;
+  flex-direction: column;
+}
+
+.submenu-open {
+  display: flex;
+}
+
+/* Nested submenu (e.g. Global > Thailand) opens to the right */
+.submenu .submenu {
+  top: 0;
+  left: 100%;
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu li > a,
+.submenu li > .menu-label {
+  display: block;
+  padding: 0.55rem 1rem;
+  white-space: nowrap;
+  color: #d0d5dd;
+}
+
+.submenu li > a:hover,
+.submenu li > .menu-label:hover {
+  background: #2a3547;
+  color: #fff;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #101828;
+  }
+
+  .nav-links-open {
+    display: block;
+  }
+
+  .menu-root {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 1.25rem 1rem;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    background: #1a2437;
+    display: none;
+  }
+
+  .submenu-open {
+    display: flex;
+  }
+
+  .submenu .submenu {
+    left: 0;
+    padding-left: 1rem;
+  }
+}
+
+/* ---------- Page content ---------- */
+.page {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.card {
+  overflow-x: auto; /* kalau gambar/tabel tetap lebih lebar, jadi bisa di-scroll di dalam card, bukan meluber keluar halaman */
+}
+
+.page h1 {
+  margin-top: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+/* ---------- Home menu groups ---------- */
+.menu-group {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu-title-row,
+.menu-link-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.menu-title-row a,
+.menu-link-row a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-title-row {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.menu-link-row {
+  font-size: 0.95rem;
+}
+
+.menu-link-row a {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  font-size: 1.1rem;
+}
+
+/* Color variants per group */
+.group-idr .menu-title-row {
+  background: #fbdce4;
+  color: #9f1239;
+}
+.group-idr .menu-link-row {
+  background: #fdeef2;
+  color: #9f1239;
+}
+
+.group-global .menu-title-row {
+  background: #d6e9fb;
+  color: #1e3a8a;
+}
+.group-global .menu-link-row {
+  background: #eaf4fd;
+  color: #1e3a8a;
+}
+
+.group-robot .menu-title-row {
+  background: #e6dcf9;
+  color: #5b21b6;
+}
+.group-robot .menu-link-row {
+  background: #f2ecfb;
+  color: #5b21b6;
+}
+
+.group-faq .menu-title-row {
+  background: #fde4cf;
+  color: #9a3412;
+}
+/* ---------- PGA table ---------- */
+.table-card {
+  overflow-x: auto; /* biar di mobile bisa discroll ke samping, bukan numpuk */
+  width: 100%;
+  max-width: 100%;
+}
+
+.pga-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 1100px; /* supaya kolom tidak gepeng di layar kecil, muncul scrollbar */
+  table-layout: fixed;
+}
+
+/* ================================ */
+/* TAMBAHKAN BLOK BARU INI (baris baru, setelah .pga-table {} ditutup) */
+.pga-table th:nth-child(1) { width: 2.5%; }
+.pga-table th:nth-child(2) { width: 11%; }
+.pga-table th:nth-child(3) { width: 6%; }
+.pga-table th:nth-child(4) { width: 7.5%; }
+.pga-table th:nth-child(5) { width: 15%; }
+.pga-table th:nth-child(6) { width: 11%; }
+.pga-table th:nth-child(7) { width: 47%; }
+/* ================================ */
+
+.cell-no-support {
+  background-color: rgba(255, 0, 0, 0.08);
+  color: #c0392b;
+}
+
+.cell-realtime {
+  background-color: rgba(70, 251, 20, 0.08);
+  color: #025f19;
+}
+
+.cell-tidak-ada-settlement {
+  background-color: rgba(255, 0, 0, 0.08);
+  color: #c0392b;
+}
+
+.pga-table th,
+.pga-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.pga-table th {
+  background: #f3f4f6;
+  font-weight: 700;
+}
+
+.pga-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.pga-table a {
+  color: #1a56db;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pga-table a:hover {
+  text-decoration: underline;
+}
+
+.row-highlight {
+  background: #fef3d7 !important;
+}
+/* ---------- Register call-to-action box ---------- */
+.register-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.register-label {
+  font-weight: 600;
+  color: #3730a3;
+  margin-bottom: 1rem;
+}
+
+.register-button {
+  display: inline-block;
+  background: #4338ca;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.register-button:hover {
+  background: #3730a3;
+  transform: translateY(-2px);
+}
+.pga-table td {
+  white-space: pre-line;
+}
