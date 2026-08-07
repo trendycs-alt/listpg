@@ -161,6 +161,47 @@ body {
 }
 
 /* ---------- Page content ---------- */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #82a4ea;
+  color: #101828;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+}
+
+.page-title-box {
+  background: #101828;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.page-title-box h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  background-image: linear-gradient(90deg, #5eb1f5, #0ea5e9, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .page {
   width: 100%;
   max-width: none;
@@ -177,6 +218,7 @@ body {
 
 .page h1 {
   margin-top: 0;
+  text-align: center;   /* tambahkan ini */
 }
 
 .card {
@@ -270,7 +312,19 @@ body {
   font-size: 1.1rem;
 }
 
+.center-box .menu-link-row {
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;   /* atur angka ini sesuai selera, defaultnya 0.95rem */
+}
+
 /* Color variants per group */
+
+.center-box .menu-link-row a {
+  color: #b91c1c;       /* merah lebih gelap & tegas */
+  font-weight: 700;     /* biar lebih tebal juga */
+}
+
 .group-idr .menu-title-row {
   background: #fbdce4;
   color: #9f1239;
