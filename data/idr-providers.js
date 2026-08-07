@@ -9,8 +9,8 @@ export const idrProviders = [
     path: "/payment-gateway/idr/unipay",
     Settlement: "H+0 & H+1",
     feeQris: "1.20 % - 1.30 %",
-    feeVA: "Belum Support VA ( Coming Soon )",
-    autoWithdraw: "Rp 1.800 / Transaksi",
+    feeVA: "Belum Support VA (Coming Soon)",
+    autoWithdraw: "Rp 1.800",
     preSettlement: "Tersedia Tanpa Biaya Tambahan. Tergantung Channel Unipay yang digunakan",
     highlight: true,
     },
@@ -21,7 +21,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 % - 1.225 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 3.200 / Transaksi",
+    autoWithdraw: "Rp 3.200",
     preSettlement: "Tersedia Settlement Weekend menggunakan Fee yang berbeda",
     },
     {
@@ -30,8 +30,8 @@ export const idrProviders = [
     path: "/payment-gateway/idr/oasispay",
     Settlement: "H+0 & H+1",
     feeQris: "1.20 % - 1.25 %",
-    feeVA: "Rp 4.500 / Transaksi",
-    autoWithdraw: "Rp 2.400 / Transaksi",
+    feeVA: "Rp 4.500",
+    autoWithdraw: "Rp 2.400",
     preSettlement: "Biaya tambahan 0.4 % , Pendaftaran info ke grup PGA ( H+1 )\nSettlement Setiap Hari Termasuk Weekend dan Libur ( H+0 )",
     },
     {
@@ -41,7 +41,7 @@ export const idrProviders = [
     Settlement: "Realtime & H+1",
     feeQris: "1.20 % - 1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.000 / Transaksi ( H+0 )\nRp 2.500 / Transaksi ( H+1 )",
+    autoWithdraw: "Rp 2.000 ( H+0 )\nRp 2.500 ( H+1 )",
     preSettlement: "Real time Settle : Deposit yang masuk sudah bisa langsung dicairkan (Termasuk Libur & Weekend)\nH+1 : Settlement setiap hari jam 16:00 (Termasuk Libur & Weekend)",
     },  
     {
@@ -51,7 +51,7 @@ export const idrProviders = [
     Settlement: "H+0 & H+1",
     feeQris: "1.20 % - 1.30 % ",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
+    autoWithdraw: "Rp 2.700",
     preSettlement: "H+0 Tidak ada biaya tambahan (termasuk weekend dan hari libur)\nH+1 Settlement setiap hari jam 15:00-16:00 (termasuk weekend dan hari libur)",
     },
     {
@@ -60,8 +60,8 @@ export const idrProviders = [
     path: "/payment-gateway/idr/spay",
     Settlement: "H+0 & H+1",
     feeQris: "1.20 % - 1.30 %",
-    feeVA: "Rp 4.500 / Transaksi",
-    autoWithdraw: "Rp 1.900 / Transaksi",
+    feeVA: "Rp 4.500",
+    autoWithdraw: "Rp 1.900",
     preSettlement: "H+0 bisa Settlement setiap hari ( Weekend & Libur )\nH+1 Overdraft 50% dari transaksi hari sebelumnya ( Fee 0,2% ) Pendaftaran info ke grup PGA",
     },
     {
@@ -70,8 +70,8 @@ export const idrProviders = [
     path: "/payment-gateway/idr/zenpay88",
     Settlement: "H+1",
     feeQris: "1.20 %",
-    feeVA: "Rp 4.500 / Transaksi",
-    autoWithdraw: "Rp 3.900 / Transaksi",
+    feeVA: "Rp 4.500",
+    autoWithdraw: "Rp 3.900",
     preSettlement: "Tersedia Overdraft 50 % tanpa fee tambahan tetapi transaksi harus 1M per hari",
     },
     {
@@ -81,7 +81,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.200 / Transaksi",
+    autoWithdraw: "Rp 2.200",
     preSettlement: "Biaya tambahan 0.2 % ( Weekend ) , Pinjaman 50% , Pendaftaran info ke grup PGA",
     },
     {
@@ -91,7 +91,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
+    autoWithdraw: "Rp 2.700",
     preSettlement: "Biaya tambahan 0.3 % , Pendaftaran info ke grup PGA ( paling lambat setiap Hari Kamis 12.00 WIB )",
     },  
     {
@@ -101,7 +101,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.200 / Transaksi",
+    autoWithdraw: "Rp 2.200",
     preSettlement: "Free Settlement setiap hari ( Weekend & Libur ) dengan maks pencairan 70%\nKecuali Libur panjang , dikenakan biaya tambahan 0.15 %",
     },    
     {
@@ -111,7 +111,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.900 / Transaksi",
+    autoWithdraw: "Rp 1.900",
     preSettlement: "Biaya tambahan 0.3 % , Pendaftaran paling lama di hari Kamis jam 12.00 WIB",
     },
     {
@@ -131,8 +131,8 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
-    preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA ( Terbatas Quota )",
+    autoWithdraw: "Rp 2.700",
+    preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA (Terbatas Quota)",
     },
     {
     no: 14,
@@ -141,7 +141,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
+    autoWithdraw: "Rp 2.700",
     preSettlement: "Tidak ada settlement ",
     },
     {
@@ -161,7 +161,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.20 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.900 / Transaksi",
+    autoWithdraw: "Rp 1.900",
     preSettlement: "Biaya tambahan 0.15 % , Pendaftaran maksimal H-3 di grup PGA",
     },
     {
@@ -171,7 +171,7 @@ export const idrProviders = [
     Settlement: "H+0",
     feeQris: "1.25 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.800 / Transaksi",
+    autoWithdraw: "Rp 1.800",
     preSettlement: "H+0 Tidak ada biaya tambahan (termasuk weekend dan hari libur)",
     },
     {
@@ -191,7 +191,7 @@ export const idrProviders = [
     Settlement: "H+0",
     feeQris: "1.25 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
+    autoWithdraw: "Rp 2.700",
     preSettlement: "H+0 Tidak ada biaya tambahan (Termasuk Weekend dan Hari Libur)",
     },
     {
@@ -201,7 +201,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.700 / Transaksi",
+    autoWithdraw: "Rp 1.700",
     preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA",
     },
     {
@@ -211,7 +211,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.200 / Transaksi",
+    autoWithdraw: "Rp 2.200",
     preSettlement: "Biaya tambahan 0.6 % , Harus Isi Form Pendaftaran",
     },
     {
@@ -221,7 +221,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.800 / Transaksi",
+    autoWithdraw: "Rp 1.800",
     preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA",
     },
     {
@@ -241,7 +241,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 3.700 / Transaksi",
+    autoWithdraw: "Rp 3.700",
     preSettlement: "Tidak ada biaya tambahan (Termasuk Weekend dan Hari Libur)",
     },
     {
@@ -251,7 +251,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 3.700 / Transaksi",
+    autoWithdraw: "Rp 3.700",
     preSettlement: "Tidak ada biaya tambahan (Termasuk Weekend dan Hari Libur)",
     },
     {
@@ -261,7 +261,7 @@ export const idrProviders = [
     Settlement: "H+0",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.700 / Transaksi",
+    autoWithdraw: "Rp 2.700",
     preSettlement: "Tidak ada Biaya tambahan , Settlement tersedia Setiap hari dengan sistem 4 Batch",
     },
     {
@@ -271,7 +271,7 @@ export const idrProviders = [
     Settlement: "H+1",
     feeQris: "1.30 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 1.800 / Transaksi",
+    autoWithdraw: "Rp 1.800",
     preSettlement: "Tidak ada Biaya tambahan, settlement setiap hari. (Termasuk Weekend dan tanggal merah)",
     },
     {
@@ -281,7 +281,7 @@ export const idrProviders = [
     Settlement: "H+0",
     feeQris: "1.35 %",
     feeVA: "No Support",
-    autoWithdraw: "Rp 2.200 / Transaksi",
+    autoWithdraw: "Rp 2.200",
     preSettlement: "USDT Only , Settlement Setiap Hari ( 09.00 - 21.00 WIB )",
     },
     {
@@ -291,7 +291,7 @@ export const idrProviders = [
     Settlement: "H+0",
     feeQris: "1 %",
     feeVA: "No Support",
-    autoWithdraw: "0.5 % / Transaksi",
+    autoWithdraw: "0.5 %",
     preSettlement: "H+1 Setiap Hari",
     },                             
   // Tambah provider baru: copy salah satu blok di atas, ganti isinya.

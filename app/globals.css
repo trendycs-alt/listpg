@@ -173,6 +173,8 @@ body {
   overflow-x: auto; /* kalau gambar/tabel tetap lebih lebar, jadi bisa di-scroll di dalam card, bukan meluber keluar halaman */
 }
 
+
+
 .page h1 {
   margin-top: 0;
 }
@@ -187,14 +189,54 @@ body {
 .responsive-img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
+}
+
+.hero-row {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.menu-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;  /* jarak antar box, gantikan margin-bottom yang dihapus */
+}
+
+.hero-banner-side {
+  flex: 1;
+  max-width: 45%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
+
+/* Di layar kecil (mobile), balik jadi ditumpuk atas-bawah seperti semula */
+@media (max-width: 768px) {
+  .hero-row {
+    flex-direction: column;
+  }
+
+  .hero-banner-side {
+    max-width: 100%;
+  }
+}
+
 /* ---------- Home menu groups ---------- */
 .menu-group {
-  margin-bottom: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
+}
+
+/* space-between cuma aktif di desktop, biar ngisi penuh tinggi banner */
+@media (min-width: 769px) {
+  .menu-column {
+    justify-content: space-between;
+  }
 }
 
 .menu-title-row,
@@ -364,4 +406,78 @@ body {
 }
 .pga-table td {
   white-space: pre-line;
+}
+
+/* Default: tampilkan tabel, sembunyikan card */
+.pga-cards {
+  display: none;
+}
+
+/* Di layar kecil (mobile): sembunyikan tabel, tampilkan card */
+@media (max-width: 640px) {
+  .pga-table {
+    display: none;
+  }
+
+  .pga-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pga-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  .pga-card.card-highlight {
+    background: #fff8e1;
+    border-color: #ffe082;
+  }
+
+  .pga-card-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .pga-card-no {
+    color: #888;
+    font-weight: 400;
+  }
+
+  .pga-card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+    font-size: 13px;
+  }
+
+  .pga-card-body span {
+  white-space: pre-line;
+  }
+
+  .pga-card-body > div:last-child {
+  grid-column: 1 / -1;
+  } 
+
+  .pga-card-body > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pga-card-label {
+    color: #888;
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .cell-no-support {
+    color: #c0392b;
+    font-weight: 500;
+  }
 }
