@@ -1,12 +1,16 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 
 export default function MNP() {
+  const router = useRouter();
+
   return (
     <div className="page">
 
-      <Link href="/payment-gateway/idr" className="back-button">
+      <button onClick={() => router.back()} className="back-button">
         ← Back
-      </Link>
+      </button>
 
       <div className="page-title-box">
         <h1>MNP</h1>
@@ -22,7 +26,7 @@ export default function MNP() {
           </div>
         </div>
         <img
-          src="/MNP-fee.webp"
+          src="/mnp-fee.webp"
           alt="MNP LOGO"
           className="responsive-img"
         />
