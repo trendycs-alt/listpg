@@ -1,9 +1,21 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function UniPay() {
+  const router = useRouter();
+
   return (
     <div className="page">
-      <h1>UNIPAY</h1>
+      <button onClick={() => router.back()} className="back-button">
+        ← Back
+      </button>
 
-      <div className="card">
+      <div className="page-title-box">
+        <h1>UNIPAY</h1>
+      </div>
+
+      <div className="card dark-theme">
         <h2>UNIPAY001</h2>
         <img
           src="/unipay001-fee.webp"
@@ -12,7 +24,7 @@ export default function UniPay() {
         />
       </div>
 
-      <div className="card">
+      <div className="card dark-theme">
         <h2>UNIPAY002</h2>
         <img
           src="/unipay002-fee.webp"
@@ -21,7 +33,7 @@ export default function UniPay() {
         />
       </div>
 
-      <div className="card">
+      <div className="card dark-theme">
         <h2>UNIPAY003</h2>
         <img
           src="/unipay003-fee.webp"
@@ -30,24 +42,13 @@ export default function UniPay() {
         />
       </div>
 
-      <div className="card">
+      <div className="card dark-theme">
         <h2>UNIPAY004</h2>
         <img
           src="/unipay004-fee.webp"
           alt="UNIPAY004"
           className="responsive-img"
         />
-      </div>
-
-      <div className="register-box">
-        <p className="register-label">📌 Untuk Pendaftaran UNIPAY, silahkan gunakan tautan dibawah ini:</p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeEhfw8o2Zn7_qiSYWyB4wvD4QH72aJxegM176TJ2HpO_u90g/viewform"
-          rel="noopener noreferrer"
-          className="register-button"
-        >
-          Formulir Pendaftaran UNIPAY →
-        </a>
       </div>
     </div>
   );

@@ -16,17 +16,17 @@ export default function MNP() {
         <h1>MNP</h1>
       </div>
 
-      <div className="card">
+      <div className="card dark-theme">
         <div className="menu-group group-idr center-box">
           <div className="menu-link-row">
             <span className="menu-icon">👉</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK5thxl0GAO09hbLPhPi8DpyGKUOFDyNVISGc9DeC8omc9zQ/viewform" target="_blank" rel="noopener noreferrer">
-              Register ( IDR )
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoIt1sc3wzYZzx0_CPGlnwO5VuE942NW__kkujOafHzsdIrA/viewform" target="_blank" rel="noopener noreferrer">
+                Register ( IDR )
             </a>
           </div>
         </div>
         <img
-          src="/mnp-fee.webp"
+          src="/MNP-fee.webp"
           alt="MNP LOGO"
           className="responsive-img"
         />

@@ -7,10 +7,11 @@ import { menu } from "../data/menu";
 function MenuItem({ item, onNavigate }) {
   const [open, setOpen] = useState(false);
   const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+  const isRegister = item.title === "Register";
 
   return (
     <li
-      className="menu-item"
+      className={`menu-item ${isRegister ? "register-item" : ""}`}
       onMouseEnter={() => hasChildren && setOpen(true)}
       onMouseLeave={() => hasChildren && setOpen(false)}
     >
@@ -37,7 +38,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef(null);
 
-  // Tutup menu saat klik di luar area navbar
   useEffect(() => {
     function handleClickOutside(event) {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -48,14 +48,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Tutup menu saat salah satu link diklik
   const closeMenu = () => setMobileOpen(false);
 
   return (
     <header className="navbar" ref={navRef}>
       <div className="navbar-inner">
         <Link href="/" className="brand" onClick={closeMenu}>
-          PAYMENT GATEWAY SYSTEM
+        <span className="brand-logo">PG</span>
+         PAYMENT GATEWAY
         </Link>
 
         <button

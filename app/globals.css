@@ -5,23 +5,25 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #1a1a1a;
-  background: #f7f7f8;
+  color: #e5e9f0;
+  background: #0a0f1e;
 }
 
 /* ---------- Navbar ---------- */
 .navbar {
-  background: #101828;
+  background: linear-gradient(90deg, #0a0f1e, #0d1730);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #1e3a5f;
+  box-shadow: 0 1px 20px rgba(14, 165, 233, 0.15);
 }
 
 .navbar-inner {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.9rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,6 +34,26 @@ body {
   font-weight: 700;
   font-size: 1.25rem;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #22d3ee, #5eb1f5);
+  color: #0a0f1e;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.page h1 {
+  text-align: center;
 }
 
 .hamburger {
@@ -50,6 +72,7 @@ body {
 .menu-root {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
@@ -61,7 +84,7 @@ body {
 
 .menu-item > a,
 .menu-item > .menu-label {
-  color: #d0d5dd;
+  color: #a8b4c8;
   text-decoration: none;
   font-size: 0.95rem;
   padding: 0.5rem 0;
@@ -71,7 +94,23 @@ body {
 
 .menu-item > a:hover,
 .menu-item > .menu-label:hover {
-  color: #fff;
+  color: #5eb1f5;
+}
+
+/* Register button - outline pill style */
+.menu-item.register-item > a,
+.menu-item.register-item > .menu-label {
+  border: 1px solid #5eb1f5;
+  color: #5eb1f5;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-item.register-item > a:hover,
+.menu-item.register-item > .menu-label:hover {
+  background: #5eb1f5;
+  color: #0a0f1e;
 }
 
 /* Submenu (dropdown) */
@@ -82,10 +121,11 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #1d2939;
+  background: #101c36;
   min-width: 200px;
   border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid #1e3a5f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   display: none;
   flex-direction: column;
 }
@@ -94,7 +134,6 @@ body {
   display: flex;
 }
 
-/* Nested submenu (e.g. Global > Thailand) opens to the right */
 .submenu .submenu {
   top: 0;
   left: 100%;
@@ -109,13 +148,13 @@ body {
   display: block;
   padding: 0.55rem 1rem;
   white-space: nowrap;
-  color: #d0d5dd;
+  color: #a8b4c8;
 }
 
 .submenu li > a:hover,
 .submenu li > .menu-label:hover {
-  background: #2a3547;
-  color: #fff;
+  background: #17233f;
+  color: #5eb1f5;
 }
 
 /* ---------- Mobile ---------- */
@@ -130,7 +169,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #101828;
+    background: #0a0f1e;
   }
 
   .nav-links-open {
@@ -139,6 +178,7 @@ body {
 
   .menu-root {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0;
     padding: 0.5rem 1.25rem 1rem;
   }
@@ -146,7 +186,7 @@ body {
   .submenu {
     position: static;
     box-shadow: none;
-    background: #1a2437;
+    background: #101c36;
     display: none;
   }
 
@@ -161,71 +201,31 @@ body {
 }
 
 /* ---------- Page content ---------- */
-
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  background: #82a4ea;
-  color: #101828;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  transition: background 0.2s ease;
-}
-
-.back-button:hover {
-  background: #e5e7eb;
-}
-
-.page-title-box {
-  background: #101828;
-  border-radius: 12px;
-  padding: 28px 24px;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.page-title-box h1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0;
-  background-image: linear-gradient(90deg, #5eb1f5, #0ea5e9, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .page {
   width: 100%;
   max-width: none;
   margin: 0 auto;
   padding: 2.5rem 1.25rem;
   box-sizing: border-box;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(14, 165, 233, 0.06), transparent 40%),
+    radial-gradient(circle at 90% 15%, rgba(14, 165, 233, 0.05), transparent 35%),
+    #0a0f1e;
+  min-height: 100vh;
 }
-
-.card {
-  overflow-x: auto; /* kalau gambar/tabel tetap lebih lebar, jadi bisa di-scroll di dalam card, bukan meluber keluar halaman */
-}
-
-
 
 .page h1 {
   margin-top: 0;
-  text-align: center;   /* tambahkan ini */
+  color: #fff;
 }
 
 .card {
-  background: #fff;
+  background: #0d1730;
+  border: 1px solid #1e3a5f;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
 }
 
 .responsive-img {
@@ -246,7 +246,13 @@ body {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;  /* jarak antar box, gantikan margin-bottom yang dihapus */
+  gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .menu-column {
+    justify-content: space-between;
+  }
 }
 
 .hero-banner-side {
@@ -257,7 +263,6 @@ body {
   border-radius: 8px;
 }
 
-/* Di layar kecil (mobile), balik jadi ditumpuk atas-bawah seperti semula */
 @media (max-width: 768px) {
   .hero-row {
     flex-direction: column;
@@ -272,13 +277,7 @@ body {
 .menu-group {
   border-radius: 8px;
   overflow: hidden;
-}
-
-/* space-between cuma aktif di desktop, biar ngisi penuh tinggi banner */
-@media (min-width: 769px) {
-  .menu-column {
-    justify-content: space-between;
-  }
+  border: 1px solid #1e3a5f;
 }
 
 .menu-title-row,
@@ -312,53 +311,116 @@ body {
   font-size: 1.1rem;
 }
 
-.center-box .menu-link-row {
-  justify-content: center;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;   /* atur angka ini sesuai selera, defaultnya 0.95rem */
-}
-
-/* Color variants per group */
-
-.center-box .menu-link-row a {
-  color: #b91c1c;       /* merah lebih gelap & tegas */
-  font-weight: 700;     /* biar lebih tebal juga */
-}
-
+/* Color variants per group - dark theme */
 .group-idr .menu-title-row {
-  background: #fbdce4;
-  color: #9f1239;
+  background: rgba(212, 83, 126, 0.15);
+  color: #f0a8c1;
 }
 .group-idr .menu-link-row {
-  background: #fdeef2;
-  color: #9f1239;
+  background: rgba(212, 83, 126, 0.08);
+  color: #f0a8c1;
 }
 
 .group-global .menu-title-row {
-  background: #d6e9fb;
-  color: #1e3a8a;
+  background: rgba(55, 138, 221, 0.15);
+  color: #85b7eb;
 }
 .group-global .menu-link-row {
-  background: #eaf4fd;
-  color: #1e3a8a;
+  background: rgba(55, 138, 221, 0.08);
+  color: #85b7eb;
 }
 
 .group-robot .menu-title-row {
-  background: #e6dcf9;
-  color: #5b21b6;
+  background: rgba(127, 119, 221, 0.15);
+  color: #afa9ec;
 }
 .group-robot .menu-link-row {
-  background: #f2ecfb;
-  color: #5b21b6;
+  background: rgba(127, 119, 221, 0.08);
+  color: #afa9ec;
 }
 
 .group-faq .menu-title-row {
-  background: #fde4cf;
-  color: #9a3412;
+  background: rgba(216, 90, 48, 0.15);
+  color: #f0997b;
 }
+
+/* ---------- Page title box (provider pages) ---------- */
+.page-title-box {
+  background: linear-gradient(135deg, #0d1730, #131f3d);
+  border: 1px solid #1e3a5f;
+  border-radius: 12px;
+  padding: 18px 24px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.page-title-box h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  background-image: linear-gradient(90deg, #5eb1f5, #0ea5e9, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card.dark-theme .menu-group {
+  border: none;
+}
+
+.card.dark-theme {
+  background: #0d1730;
+  border: 0.5px solid #1e3a5f;
+}
+
+.card.dark-theme .center-box .menu-link-row {
+  background: transparent;
+}
+
+.card.dark-theme .center-box .menu-link-row a {
+  color: #82a4ea;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.7rem;
+  background: #82a4ea;
+  color: #0a0f1e;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: #a8c0f5;
+}
+
+.center-box .menu-link-row {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  min-height: 90px;
+  margin-top: -30px;
+}
+
+.center-box .menu-link-row a {
+  color: #f0a8c1;
+  font-weight: 700;
+}
+
 /* ---------- PGA table ---------- */
 .table-card {
-  overflow-x: auto; /* biar di mobile bisa discroll ke samping, bukan numpuk */
+  overflow-x: auto;
   width: 100%;
   max-width: 100%;
 }
@@ -367,55 +429,43 @@ body {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  min-width: 1100px; /* supaya kolom tidak gepeng di layar kecil, muncul scrollbar */
+  min-width: 1100px;
   table-layout: fixed;
 }
 
-/* ================================ */
-/* TAMBAHKAN BLOK BARU INI (baris baru, setelah .pga-table {} ditutup) */
 .pga-table th:nth-child(1) { width: 2.5%; }
 .pga-table th:nth-child(2) { width: 11%; }
-.pga-table th:nth-child(3) { width: 6%; }
+.pga-table th:nth-child(3) { width: 10%; }
 .pga-table th:nth-child(4) { width: 7.5%; }
 .pga-table th:nth-child(5) { width: 15%; }
 .pga-table th:nth-child(6) { width: 11%; }
-.pga-table th:nth-child(7) { width: 47%; }
-/* ================================ */
-
-.cell-no-support {
-  background-color: rgba(255, 0, 0, 0.08);
-  color: #c0392b;
-}
-
-.cell-realtime {
-  background-color: rgba(70, 251, 20, 0.08);
-  color: #025f19;
-}
-
-.cell-tidak-ada-settlement {
-  background-color: rgba(255, 0, 0, 0.08);
-  color: #c0392b;
-}
+.pga-table th:nth-child(7) { width: 43%; }
 
 .pga-table th,
 .pga-table td {
-  border: 1px solid #e5e7eb;
-  padding: 0.6rem 0.75rem;
+  border: 1px solid #1e3a5f;
+  padding: 0.7rem 0.85rem;
   text-align: left;
   vertical-align: top;
+  color: #dbe2ee;
 }
 
 .pga-table th {
-  background: #f3f4f6;
+  background: rgba(94, 177, 245, 0.06);
+  color: #fff;
   font-weight: 700;
 }
 
 .pga-table tbody tr:nth-child(even) {
-  background: #fafafa;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.pga-table tbody tr:hover {
+  background: rgba(94, 177, 245, 0.05);
 }
 
 .pga-table a {
-  color: #1a56db;
+  color: #5eb1f5;
   font-weight: 600;
   text-decoration: none;
 }
@@ -425,28 +475,77 @@ body {
 }
 
 .row-highlight {
-  background: #fef3d7 !important;
+  background: rgba(250, 199, 117, 0.08) !important;
 }
+
+.pga-table td {
+  white-space: pre-line;
+}
+
+/* Status pills */
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.pill-ok {
+  color: #6bd47a;
+  border-color: #2e7d43;
+  background: rgba(107, 212, 122, 0.08);
+}
+
+.pill-realtime {
+  color: #4ade80;
+  border-color: #22c55e;
+  background: rgba(74, 222, 128, 0.12);
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.35);
+}
+
+.cell-no-support {
+  color: #f09595;
+}
+
+.cell-no-support .pill,
+.pill-danger {
+  color: #f09595;
+  border-color: #a32d2d;
+  background: rgba(240, 149, 149, 0.08);
+}
+
+.cell-realtime {
+  color: #6bd47a;
+}
+
+.cell-tidak-ada-settlement {
+  color: #f09595;
+}
+
 /* ---------- Register call-to-action box ---------- */
 .register-box {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-  border: 1px solid #c7d2fe;
+  background: linear-gradient(135deg, #101c36, #131f3d);
+  border: 1px solid #1e3a5f;
   border-radius: 10px;
   text-align: center;
 }
 
 .register-label {
   font-weight: 600;
-  color: #3730a3;
+  color: #a8c0f5;
   margin-bottom: 1rem;
 }
 
 .register-button {
   display: inline-block;
-  background: #4338ca;
-  color: #fff;
+  background: #5eb1f5;
+  color: #0a0f1e;
   font-weight: 700;
   text-decoration: none;
   padding: 0.75rem 1.75rem;
@@ -455,22 +554,81 @@ body {
 }
 
 .register-button:hover {
-  background: #3730a3;
+  background: #85c3f7;
   transform: translateY(-2px);
 }
-.pga-table td {
-  white-space: pre-line;
+
+/* ---------- Keterangan / info box ---------- */
+.info-box {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(94, 177, 245, 0.06);
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
 }
 
-/* Default: tampilkan tabel, sembunyikan card */
+.info-box-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #5eb1f5;
+  color: #5eb1f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.info-box-title {
+  color: #5eb1f5;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.info-box-text {
+  color: #a8b4c8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Default: tampilkan tabel, sembunyikan card mobile */
 .pga-cards {
   display: none;
 }
 
-/* Di layar kecil (mobile): sembunyikan tabel, tampilkan card */
 @media (max-width: 640px) {
   .pga-table {
     display: none;
+  }
+
+  .pill {
+    font-size: 0.68rem;
+    padding: 1px 8px;
+    border-radius: 14px;
+  }
+.pill-realtime {
+    font-size: 0.66rem;
+    padding: 2px 6px;
+    letter-spacing: -0.2px;
+  }
+  .pga-card-name {
+    color: #5eb1f5 !important;
+    text-decoration: none !important;
+    font-weight: 700;
+  }
+
+  .pga-card-name:visited {
+    color: #5eb1f5 !important;
+  }
+
+  .pga-card-name:hover {
+    text-decoration: underline !important;
   }
 
   .pga-cards {
@@ -480,15 +638,15 @@ body {
   }
 
   .pga-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
+    background: #0d1730;
+    border: 1px solid #1e3a5f;
     border-radius: 10px;
     padding: 12px 14px;
   }
 
   .pga-card.card-highlight {
-    background: #fff8e1;
-    border-color: #ffe082;
+    background: rgba(250, 199, 117, 0.08);
+    border-color: #7a5c1e;
   }
 
   .pga-card-header {
@@ -497,10 +655,11 @@ body {
     gap: 6px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #fff;
   }
 
   .pga-card-no {
-    color: #888;
+    color: #7c8aa3;
     font-weight: 400;
   }
 
@@ -509,29 +668,26 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 8px 12px;
     font-size: 13px;
+    color: #dbe2ee;
   }
 
   .pga-card-body span {
-  white-space: pre-line;
+    white-space: pre-line;
   }
 
   .pga-card-body > div:last-child {
-  grid-column: 1 / -1;
-  } 
+    grid-column: 1 / -1;
+  }
 
   .pga-card-body > div {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .pga-card-label {
-    color: #888;
+    color: #7c8aa3;
     font-size: 11px;
     margin-bottom: 2px;
-  }
-
-  .cell-no-support {
-    color: #c0392b;
-    font-weight: 500;
   }
 }

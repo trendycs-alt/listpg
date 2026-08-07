@@ -1,6 +1,23 @@
 import Link from "next/link";
 import { idrProviders } from "../../../data/idr-providers";
 
+function SettlementPill({ value }) {
+  const isRealtime = value.includes("Realtime");
+  return (
+    <span className={`pill ${isRealtime ? "pill-realtime" : "pill-ok"}`}>
+      {isRealtime && "⚡ "}
+      {value}
+    </span>
+  );
+}
+
+function StatusCell({ value }) {
+  if (value.includes("No Support")) {
+    return <span className="pill pill-danger">{value}</span>;
+  }
+  return <span>{value}</span>;
+}
+
 export default function PaymentGatewayIDR() {
   return (
     <div className="page">
@@ -29,18 +46,19 @@ export default function PaymentGatewayIDR() {
                     <span>🟢 {p.name}</span>
                   )}
                 </td>
-                <td className={p.Settlement.includes("Realtime") ? "cell-realtime" : ""}>
-                    {p.Settlement}
+                <td>
+                  <SettlementPill value={p.Settlement} />
                 </td>
                 <td>{p.feeQris}</td>
                 <td className={p.feeVA.includes("No Support") ? "cell-no-support" : ""}>
-                    {p.feeVA}
+                  <StatusCell value={p.feeVA} />
                 </td>
                 <td className={p.autoWithdraw.includes("No Support") ? "cell-no-support" : ""}>
-                    {p.autoWithdraw}
+                  <StatusCell value={p.autoWithdraw} />
                 </td>
                 <td className={p.preSettlement.includes("Tidak ada settlement") ? "cell-tidak-ada-settlement" : ""}>
-                    {p.preSettlement}</td>
+                  {p.preSettlement}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -61,9 +79,7 @@ export default function PaymentGatewayIDR() {
               <div className="pga-card-body">
                 <div>
                   <span className="pga-card-label">Settlement</span>
-                  <span className={p.Settlement.includes("Realtime") ? "cell-realtime" : ""}>
-                    {p.Settlement}
-                  </span>
+                  <SettlementPill value={p.Settlement} />
                 </div>
                 <div>
                   <span className="pga-card-label">Fee Qris</span>
@@ -71,15 +87,11 @@ export default function PaymentGatewayIDR() {
                 </div>
                 <div>
                   <span className="pga-card-label">Fee VA</span>
-                  <span className={p.feeVA.includes("No Support") ? "cell-no-support" : ""}>
-                    {p.feeVA}
-                  </span>
+                  <StatusCell value={p.feeVA} />
                 </div>
                 <div>
                   <span className="pga-card-label">Auto Withdraw</span>
-                  <span className={p.autoWithdraw.includes("No Support") ? "cell-no-support" : ""}>
-                    {p.autoWithdraw}
-                  </span>
+                  <StatusCell value={p.autoWithdraw} />
                 </div>
                 <div>
                   <span className="pga-card-label">Pre Settlement</span>
@@ -90,6 +102,16 @@ export default function PaymentGatewayIDR() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="info-box">
+        <div className="info-box-icon">i</div>
+        <div>
+          <p className="info-box-title">Keterangan</p>
+          <p className="info-box-text">
+            Untuk informasi lebih lanjut, silakan hubungi team kami.
+          </p>
         </div>
       </div>
     </div>
