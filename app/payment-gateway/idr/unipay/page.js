@@ -29,7 +29,7 @@ export default function UniPay() {
       <div className="card dark-theme">
         <h2>UNIPAY001</h2>
         <img
-          src="/unipay001-fee.png"
+          src="/UNIPAY001-fee.png"
           alt="UNIPAY001"
           className="responsive-img"
         />
@@ -38,7 +38,7 @@ export default function UniPay() {
       <div className="card dark-theme">
         <h2>UNIPAY002</h2>
         <img
-          src="/unipay002-fee.png"
+          src="/UNIPAY002-fee.png"
           alt="UNIPAY002"
           className="responsive-img"
         />
@@ -47,7 +47,7 @@ export default function UniPay() {
       <div className="card dark-theme">
         <h2>UNIPAY003</h2>
         <img
-          src="/unipay003-fee.png"
+          src="/UNIPAY003-fee.png"
           alt="UNIPAY003"
           className="responsive-img"
         />
@@ -56,7 +56,7 @@ export default function UniPay() {
       <div className="card dark-theme">
         <h2>UNIPAY004</h2>
         <img
-          src="/unipay004-fee.png"
+          src="/UNIPAY004-fee.png"
           alt="UNIPAY004"
           className="responsive-img"
         />
