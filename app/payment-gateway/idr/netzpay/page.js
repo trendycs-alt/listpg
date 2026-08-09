@@ -26,7 +26,7 @@ export default function NETZPAY() {
           </div>
         </div>
         <img
-          src="/NETZPAY-fee.webp"
+          src="/NETZPAY-fee.png"
           alt="NETZPAY LOGO"
           className="responsive-img"
         />

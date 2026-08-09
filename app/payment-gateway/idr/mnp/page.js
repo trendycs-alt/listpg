@@ -26,7 +26,7 @@ export default function MNP() {
           </div>
         </div>
         <img
-          src="/MNP-fee.webp"
+          src="/MNP-fee.png"
           alt="MNP LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function SPAY() {
           </div>
         </div>
         <img
-          src="/SPAY-fee.webp"
+          src="/SPAY-fee.png"
           alt="SPAY LOGO"
           className="responsive-img"
         />

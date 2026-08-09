@@ -26,7 +26,7 @@ export default function FLYPAY() {
           </div>
         </div>
         <img
-          src="/FLYPAY-fee.webp"
+          src="/FLYPAY-fee.png"
           alt="FLYPAY LOGO"
           className="responsive-img"
         />

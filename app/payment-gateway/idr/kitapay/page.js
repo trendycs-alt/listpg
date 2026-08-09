@@ -26,7 +26,7 @@ export default function KITAPAY() {
           </div>
         </div>
         <img
-          src="/KITAPAY-fee.webp"
+          src="/KITAPAY-fee.png"
           alt="KITAPAY LOGO"
           className="responsive-img"
         />

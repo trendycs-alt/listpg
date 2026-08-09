@@ -26,7 +26,7 @@ export default function MOMOPAY() {
           </div>
         </div>
         <img
-          src="/MOMOPAY-fee.webp"
+          src="/MOMOPAY-fee.png"
           alt="MOMOPAY LOGO"
           className="responsive-img"
         />

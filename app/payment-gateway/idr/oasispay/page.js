@@ -26,7 +26,7 @@ export default function OASISPAY() {
           </div>
         </div>
         <img
-          src="/OASISPAY-fee.webp"
+          src="/OASISPAY-fee.png"
           alt="OASISPAY LOGO"
           className="responsive-img"
         />

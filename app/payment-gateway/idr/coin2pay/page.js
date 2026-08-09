@@ -26,7 +26,7 @@ export default function COIN2PAY() {
           </div>
         </div>
         <img
-          src="/COIN2PAY-fee.webp"
+          src="/COIN2PAY-fee.png"
           alt="COIN2PAY LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function DRIFTPAY() {
           </div>
         </div>
         <img
-          src="/DRIFTPAY-fee.webp"
+          src="/DRIFTPAY-fee.png"
           alt="DRIFTPAY LOGO"
           className="responsive-img"
         />

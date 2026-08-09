@@ -26,7 +26,7 @@ export default function POPPAY() {
           </div>
         </div>
         <img
-          src="/POPPAY-fee.webp"
+          src="/POPPAY-fee.png"
           alt="POPPAY LOGO"
           className="responsive-img"
         />

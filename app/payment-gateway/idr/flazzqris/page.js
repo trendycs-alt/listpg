@@ -26,7 +26,7 @@ export default function FLAZZQRIS() {
           </div>
         </div>
         <img
-          src="/FLAZZQRIS-fee.webp"
+          src="/FLAZZQRIS-fee.png"
           alt="FLAZZQRIS LOGO"
           className="responsive-img"
         />

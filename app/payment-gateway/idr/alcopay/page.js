@@ -26,7 +26,7 @@ export default function ALCOPAY() {
           </div>
         </div>
         <img
-          src="/ALCOPAY-fee.webp"
+          src="/ALCOPAY-fee.png"
           alt="ALCOPAY LOGO"
           className="responsive-img"
         />

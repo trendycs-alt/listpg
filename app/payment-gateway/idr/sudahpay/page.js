@@ -26,7 +26,7 @@ export default function SUDAHPAY() {
           </div>
         </div>
         <img
-          src="/SUDAHPAY-fee.webp"
+          src="/SUDAHPAY-fee.png"
           alt="SUDAHPAY LOGO"
           className="responsive-img"
         />

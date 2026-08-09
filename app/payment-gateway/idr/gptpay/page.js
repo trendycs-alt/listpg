@@ -26,7 +26,7 @@ export default function GPTPAY() {
           </div>
         </div>
         <img
-          src="/GPTPAY-fee.webp"
+          src="/GPTPAY-fee.png"
           alt="GPTPAY LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function BLAZZPAY() {
           </div>
         </div>
         <img
-          src="/BLAZZPAY-fee.webp"
+          src="/BLAZZPAY-fee.png"
           alt="BLAZZPAY LOGO"
           className="responsive-img"
         />

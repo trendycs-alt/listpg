@@ -54,7 +54,7 @@ export default function Navbar() {
     <header className="navbar" ref={navRef}>
       <div className="navbar-inner">
         <Link href="/" className="brand" onClick={closeMenu}>
-        <span className="brand-logo">PG</span>
+         <img src="/pglogo-pga.png" alt="Logo" className="brand-logo-img" />
          PAYMENT GATEWAY
         </Link>
 

@@ -26,7 +26,7 @@ export default function QRISFLYER() {
           </div>
         </div>
         <img
-          src="/QRISFLYER-fee.webp"
+          src="/QRISFLYER-fee.png"
           alt="QRISFLYER LOGO"
           className="responsive-img"
         />

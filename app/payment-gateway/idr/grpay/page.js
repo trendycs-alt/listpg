@@ -26,7 +26,7 @@ export default function GRPAY() {
           </div>
         </div>
         <img
-          src="/GRPAY-fee.webp"
+          src="/GRPAY-fee.png"
           alt="GRPAY LOGO"
           className="responsive-img"
         />

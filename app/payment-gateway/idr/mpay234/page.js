@@ -26,7 +26,7 @@ export default function MPAY234() {
           </div>
         </div>
         <img
-          src="/MPAY234-fee.webp"
+          src="/MPAY234-fee.png"
           alt="MPAY234 LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function QRISHOKI() {
           </div>
         </div>
         <img
-          src="/QRISHOKI-fee.webp"
+          src="/QRISHOKI-fee.png"
           alt="QRISHOKI LOGO"
           className="responsive-img"
         />

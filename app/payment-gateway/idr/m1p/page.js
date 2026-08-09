@@ -26,7 +26,7 @@ export default function M1P() {
           </div>
         </div>
         <img
-          src="/M1P-fee.webp"
+          src="/M1P-fee.png"
           alt="M1P LOGO"
           className="responsive-img"
         />

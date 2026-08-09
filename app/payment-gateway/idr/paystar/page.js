@@ -26,7 +26,7 @@ export default function PAYSTAR() {
           </div>
         </div>
         <img
-          src="/PAYSTAR-fee.webp"
+          src="/PAYSTAR-fee.png"
           alt="PAYSTAR LOGO"
           className="responsive-img"
         />

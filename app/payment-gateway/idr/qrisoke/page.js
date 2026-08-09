@@ -26,7 +26,7 @@ export default function QRISOKE() {
           </div>
         </div>
         <img
-          src="/QRISOKE-fee.webp"
+          src="/QRISOKE-fee.png"
           alt="QRISOKE LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function PayproIndonesia() {
           </div>
         </div>
         <img
-          src="/PAYPRO-fee.webp"
+          src="/PAYPRO-fee.png"
           alt="PAYPRO INDONESIA LOGO"
           className="responsive-img"
         />

@@ -26,7 +26,7 @@ export default function S2PAY() {
           </div>
         </div>
         <img
-          src="/S2PAY-fee.webp"
+          src="/S2PAY-fee.png"
           alt="S2PAY LOGO"
           className="responsive-img"
         />

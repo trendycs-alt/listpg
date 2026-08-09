@@ -26,7 +26,7 @@ export default function PAYDAY() {
           </div>
         </div>
         <img
-          src="/PAYDAY-fee.webp"
+          src="/PAYDAY-fee.png"
           alt="PAYDAY LOGO"
           className="responsive-img"
         />
