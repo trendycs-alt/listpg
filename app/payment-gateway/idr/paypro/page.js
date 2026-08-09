@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default function PAYPRO INDONESIA() {
+export default function PayproIndonesia() {
   const router = useRouter();
 
   return (
@@ -26,7 +26,7 @@ export default function PAYPRO INDONESIA() {
           </div>
         </div>
         <img
-          src="/PAYPRO INDONESIA-fee.webp"
+          src="/PAYPRO-fee.webp"
           alt="PAYPRO INDONESIA LOGO"
           className="responsive-img"
         />
