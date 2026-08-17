@@ -11,11 +11,15 @@ function SettlementPill({ value }) {
   );
 }
 
-function StatusCell({ value }) {
-  if (value.includes("No Support")) {
+function safeIncludes(value, keyword) {
+  return typeof value === "string" && value.includes(keyword);
+}
+
+function FeeVACell({ value = "" }) {
+  if (safeIncludes(value, "No Support")) {
     return <span className="pill pill-danger">{value}</span>;
   }
-  return <span>{value}</span>;
+  return <span className="pill pill-ok">{value}</span>;
 }
 
 export default function PaymentGatewayIDR() {
@@ -27,7 +31,7 @@ export default function PaymentGatewayIDR() {
           <thead>
             <tr>
               <th>No</th>
-              <th>Nama Provider PGA</th>
+              <th>Nama Provider PG</th>
               <th>Settlement</th>
               <th>Fee Qris ( % )</th>
               <th>Fee VA ( IDR & % )</th>
@@ -50,12 +54,10 @@ export default function PaymentGatewayIDR() {
                   <SettlementPill value={p.Settlement} />
                 </td>
                 <td>{p.feeQris}</td>
-                <td className={p.feeVA.includes("No Support") ? "cell-no-support" : ""}>
-                  <StatusCell value={p.feeVA} />
+                <td>
+                <FeeVACell value={p.feeVA} />
                 </td>
-                <td className={p.autoWithdraw.includes("No Support") ? "cell-no-support" : ""}>
-                  <StatusCell value={p.autoWithdraw} />
-                </td>
+                <td>{p.autoWithdraw}</td>
                 <td className={p.preSettlement.includes("Tidak ada settlement") ? "cell-tidak-ada-settlement" : ""}>
                   {p.preSettlement}
                 </td>
@@ -87,11 +89,11 @@ export default function PaymentGatewayIDR() {
                 </div>
                 <div>
                   <span className="pga-card-label">Fee VA</span>
-                  <StatusCell value={p.feeVA} />
+                  <FeeVACell value={p.feeVA} />
                 </div>
                 <div>
-                  <span className="pga-card-label">Auto Withdraw</span>
-                  <StatusCell value={p.autoWithdraw} />
+                 <span className="pga-card-label">Auto Withdraw</span>
+                  <span>{p.autoWithdraw}</span>
                 </div>
                 <div>
                   <span className="pga-card-label">Pre Settlement</span>

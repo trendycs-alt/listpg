@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import "flag-icons/css/flag-icons.min.css";
 
 export const metadata = {
   title: "PAYMENT GATEWAY",

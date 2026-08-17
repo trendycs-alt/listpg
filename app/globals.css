@@ -444,6 +444,7 @@ margin-top: 0;
   table-layout: fixed;
 }
 
+
 .pga-table th:nth-child(1) { width: 2.5%; }
 .pga-table th:nth-child(2) { width: 11%; }
 .pga-table th:nth-child(3) { width: 10%; }
@@ -491,6 +492,43 @@ margin-top: 0;
 
 .pga-table td {
   white-space: pre-line;
+}
+
+.pga-table-global {
+  min-width: 800px;
+}
+
+/* Lebar kolom khusus tabel GLOBAL */
+.pga-table-global th:nth-child(1),
+.pga-table-global td:nth-child(1) { width: 4%; }   /* No */
+
+.pga-table-global th:nth-child(2),
+.pga-table-global td:nth-child(2) { width: 16%; }  /* PG Provider */
+
+.pga-table-global th:nth-child(3),
+.pga-table-global td:nth-child(3) { width: 9%; }   /* Currency */
+
+.pga-table-global th:nth-child(4),
+.pga-table-global td:nth-child(4) { width: 13%; }  /* Settlement */
+
+.pga-table-global th:nth-child(5),
+.pga-table-global td:nth-child(5) { width: 17%; }  /* Fee QR & Bank */
+
+.pga-table-global th:nth-child(6),
+.pga-table-global td:nth-child(6) { width: 17%; }  /* Auto Withdraw */
+
+.pga-table-global th:nth-child(7),
+.pga-table-global td:nth-child(7) { width: 24%; }  /* USDT Settlement */
+
+.table-card-global {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pga-table-global th,
+.pga-table-global td {
+  padding: 0.5rem 0.65rem;
 }
 
 /* Status pills */
