@@ -13,7 +13,7 @@ export default function KOALAPAY() {
       </button>
 
       <div className="page-title-box">
-        <h1>KOALAPAY</h1>
+        <h1><span className="fi fi-au" style={{ marginRight: "10px" }}></span>KOALAPAY</h1>
       </div>
 
       <div className="card dark-theme">
