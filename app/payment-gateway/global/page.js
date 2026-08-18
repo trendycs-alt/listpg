@@ -161,12 +161,12 @@ export default function PaymentGatewayGlobal() {
         </div>
       </div>
 
-      <div className="info-box">
+      <div className="info-box info-box-global">
         <div className="info-box-icon">i</div>
         <div>
-          <p className="info-box-title">Keterangan</p>
+          <p className="info-box-title">Note</p>
           <p className="info-box-text">
-            Untuk informasi lebih lanjut, silakan hubungi team kami.
+            For further information, please contact our team.
           </p>
         </div>
       </div>
