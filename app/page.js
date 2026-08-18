@@ -4,16 +4,42 @@ import { useState } from "react";
 // ...
 function DisclaimerBox() {
   const [expanded, setExpanded] = useState(false);
+  const [lang, setLang] = useState("id"); // "id" atau "en"
 
   return (
-    <div
-      className={`disclaimer-box ${expanded ? "disclaimer-expanded" : ""}`}
-      onClick={() => setExpanded(!expanded)}
-    >
+    <div className={`disclaimer-box ${expanded ? "disclaimer-expanded" : ""}`}>
       <div className="disclaimer-icon">⚠️</div>
       <div style={{ flex: 1 }}>
-        <p className="disclaimer-title">
-          HIMBAUAN PENTING</p>
+      <div className="disclaimer-header">
+        <p className="disclaimer-title"
+           onClick={() => setExpanded(!expanded)}
+            style={{ cursor: "pointer" }}
+        >
+          {lang === "id" ? "HIMBAUAN PENTING" : "IMPORTANT NOTICE"}
+      <span className="disclaimer-toggle">
+      {expanded
+      ? lang === "id"
+    ? " ▲ (tap untuk sembunyikan)"
+    : " ▲ (tap to hide)"
+  : lang === "id"
+  ? " ▼ (tap untuk baca)"
+  : " ▼ (tap to read)"}
+      </span>
+      </p>
+          <button
+            className="lang-toggle-btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLang(lang === "id" ? "en" : "id");
+            }}
+          >
+            {lang === "id" ? "EN" : "ID"}
+          </button>
+        </div>
+
+        {lang === "id" ? (
+          <>
+
     <p className="disclaimer-text">
 🚨PG menggunakan jasa Pihak Ketiga , Mohon untuk tidak menjadikan PG sebagai rekening tampung 🚨
 </p>
@@ -24,11 +50,31 @@ Pembekuan UANG oleh Pihak Bank / Pihak Berwenang / Pihak PG ?
 Fraud QRIS & VA by member / Fraud by PG ?
 </p>
   <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
-⚠️ DI LUAR TANGGUNG JAWAB ENGINE ⚠️
+<strong>⚠️ DI LUAR TANGGUNG JAWAB ENGINE&nbsp;⚠️</strong>
 </p>
-  <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
+  <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
 Semua PG yang tersedia adalah sudah terverifikasi , NAMUN tetap terdapat kemungkinan akan adanya resiko yang tidak bisa diprediksi dan ENGINE tidak bertanggung jawab untuk hal ini
         </p>
+        </>
+        ) : (
+          <>
+    <p className="disclaimer-text">
+🚨PG is using 3rd Party service , Please do not keep your money inside PG 🚨
+</p>
+  <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
+FREEZING OF FUNDS by the Bank / Relevant Authorities / PG ?
+</p>
+  <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
+QRIS & VA fraud by members / fraud by PG ?
+</p>
+  <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
+<strong>⚠️ NOT ENGINE RESPONSIBILITY&nbsp;⚠️</strong>
+</p>
+  <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
+All available PG have been verified. HOWEVER, there is still a possibility of unforeseen risks, and ENGINE shall not be held responsible for any losses or issues arising from such risks
+        </p>
+        </>
+      )}
       </div>
     </div>
   );

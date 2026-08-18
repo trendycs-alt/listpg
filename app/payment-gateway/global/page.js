@@ -59,7 +59,7 @@ export default function PaymentGatewayGlobal() {
       📢 🚨PG is using 3rd Party service 🚨 Please do not keep your money inside PG 🚨
             FREEZING OF FUNDS by the Bank / Relevant Authorities / PG ? 🚨
             QRIS & VA fraud by members / fraud by PG ?
-            ⚠️⚠️⚠️⚠️⚠️⚠️ NOT ENGINE RESPONSIBILITY ⚠️⚠️⚠️⚠️⚠️⚠️
+            <strong>⚠️⚠️⚠️⚠️⚠️⚠️ NOT ENGINE RESPONSIBILITY ⚠️⚠️⚠️⚠️⚠️⚠️</strong>
             All available Payment Gateway have been verified. HOWEVER, there is still a possibility of unforeseen risks, and ENGINE shall not be held responsible for any losses or issues arising from such risks
       </span>
 </div>
