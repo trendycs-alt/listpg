@@ -1,45 +1,39 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { globalProviders } from "../../../data/global-providers";
 
-// Helper: aman dipakai walau value undefined/null
 function safeIncludes(value, keyword) {
   return typeof value === "string" && value.includes(keyword);
 }
 
-// Mapping kode currency -> kode negara (dipakai flag-icons, format ISO 3166-1 alpha-2).
-// Tambah baris baru di sini kalau nanti ada currency lain.
 const CURRENCY_COUNTRY = {
-  THB: "th", // Thailand
-  MYR: "my", // Malaysia
-  VND: "vn", // Vietnam
-  AUD: "au", // Australia
-  HKD: "hk", // Hongkong
-  BRL: "br", // Brazil
-  INR: "in", // India
-  BDT: "bd", // Bangladesh
-  PKR: "pk", // Pakistan
-  KES: "ke", // Kenya
-  PHP: "ph", // Philippines
+  THB: "th",
+  MYR: "my",
+  VND: "vn",
+  AUD: "au",
+  HKD: "hk",
+  BRL: "br",
+  INR: "in",
+  BDT: "bd",
+  PKR: "pk",
+  KES: "ke",
+  PHP: "ph",
 };
 
-// Bendera kecil di depan nama provider (gantiin bulatan hijau)
 function ProviderFlag({ currencyCode = "" }) {
   const countryCode = CURRENCY_COUNTRY[currencyCode];
-  if (!countryCode) return <span>🟢</span>; // fallback kalau currency belum ada di mapping
+  if (!countryCode) return <span>🟢</span>;
   return (
-    <span
-      className={`fi fi-${countryCode}`}
-      style={{ marginRight: "6px" }}
-    />
+    <span className={`fi fi-${countryCode}`} style={{ marginRight: "6px" }} />
   );
 }
 
-// Kolom Currency: teks polos, tanpa bendera
 function CurrencyText({ code = "" }) {
   return <span>{code}</span>;
 }
 
-// Pill hijau/merah untuk Auto Withdraw & USDT Settlement
 function StatusCell({ value = "" }) {
   if (safeIncludes(value, "No Support")) {
     return <span className="pill pill-danger">{value}</span>;
@@ -48,9 +42,39 @@ function StatusCell({ value = "" }) {
 }
 
 export default function PaymentGatewayGlobal() {
+  const [selectedCurrency, setSelectedCurrency] = useState("ALL");
+
+  const currencyList = ["ALL", ...new Set(globalProviders.map((p) => p.Currency))];
+
+  const filteredProviders =
+    selectedCurrency === "ALL"
+      ? globalProviders
+      : globalProviders.filter((p) => p.Currency === selectedCurrency);
+
   return (
     <div className="page">
       <h1>Payment Gateway List - GLOBAL</h1>
+      <div className="marquee-box">
+      <span className="marquee-text">
+      📢 🚨PG is using 3rd Party service 🚨 Please do not keep your money inside PG 🚨
+            FREEZING OF FUNDS by the Bank / Relevant Authorities / PG ? 🚨
+            QRIS & VA fraud by members / fraud by PG ?
+            ⚠️⚠️⚠️⚠️⚠️⚠️ NOT ENGINE RESPONSIBILITY ⚠️⚠️⚠️⚠️⚠️⚠️
+            All available Payment Gateway have been verified. HOWEVER, there is still a possibility of unforeseen risks, and ENGINE shall not be held responsible for any losses or issues arising from such risks
+      </span>
+</div>
+      <div className="currency-filter">
+        {currencyList.map((cur) => (
+          <button
+            key={cur}
+            className={`filter-btn ${selectedCurrency === cur ? "filter-btn-active" : ""}`}
+            onClick={() => setSelectedCurrency(cur)}
+          >
+            {cur}
+          </button>
+        ))}
+      </div>
+
       <div className="card table-card table-card-global">
         <table className="pga-table pga-table-global">
           <thead>
@@ -65,9 +89,9 @@ export default function PaymentGatewayGlobal() {
             </tr>
           </thead>
           <tbody>
-            {globalProviders.map((p) => (
+            {filteredProviders.map((p, index) => (
               <tr key={p.no} className={p.highlight ? "row-highlight" : ""}>
-                <td>{p.no}</td>
+              <td>{index + 1}</td>
                 <td>
                   {p.path ? (
                     <Link href={p.path}>
@@ -95,12 +119,11 @@ export default function PaymentGatewayGlobal() {
           </tbody>
         </table>
 
-        {/* Versi mobile: card per provider */}
         <div className="pga-cards">
-          {globalProviders.map((p) => (
+          {filteredProviders.map((p, index) => (
             <div key={p.no} className={`pga-card ${p.highlight ? "card-highlight" : ""}`}>
-              <div className="pga-card-header">
-                <span className="pga-card-no">{p.no}.</span>
+            <div className="pga-card-header">
+            <span className="pga-card-no">{index + 1}.</span>
                 {p.path ? (
                   <Link href={p.path} className="pga-card-name">
                     <ProviderFlag currencyCode={p.Currency} /> {p.name}

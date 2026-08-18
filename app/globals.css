@@ -445,13 +445,19 @@ margin-top: 0;
 }
 
 
-.pga-table th:nth-child(1) { width: 2.5%; }
+.pga-table th:nth-child(1),
+.pga-table td:nth-child(1) {
+  width: 3%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+}
 .pga-table th:nth-child(2) { width: 11%; }
-.pga-table th:nth-child(3) { width: 10%; }
+.pga-table th:nth-child(3) { width: 11.5%; }
 .pga-table th:nth-child(4) { width: 7.5%; }
-.pga-table th:nth-child(5) { width: 15%; }
+.pga-table th:nth-child(5) { width: 16%; }
 .pga-table th:nth-child(6) { width: 11%; }
-.pga-table th:nth-child(7) { width: 43%; }
+.pga-table th:nth-child(7) { width: 40%; }
 
 .pga-table th,
 .pga-table td {
@@ -466,6 +472,10 @@ margin-top: 0;
   background: rgba(94, 177, 245, 0.06);
   color: #fff;
   font-weight: 700;
+  vertical-align: middle;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .pga-table tbody tr:nth-child(even) {
@@ -496,6 +506,34 @@ margin-top: 0;
 
 .pga-table-global {
   min-width: 800px;
+}
+
+/* ---------- Marquee running text ---------- */
+.marquee-box {
+  overflow: hidden;
+  white-space: nowrap;
+  background: rgba(94, 177, 245, 0.06);
+  border: 1px solid #1e3a5f;
+  border-radius: 8px;
+  padding: 0.6rem 0;
+  margin-bottom: 1.5rem;
+  position: sticky;
+  top: 70px; /* sesuaikan dengan tinggi navbar kamu */
+  z-index: 50;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  color: #85c3f7;
+  font-weight: 600;
+  font-size: 0.95rem;
+  animation: marquee-scroll 55s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Lebar kolom khusus tabel GLOBAL */
@@ -531,6 +569,37 @@ margin-top: 0;
   padding: 0.5rem 0.65rem;
 }
 
+.currency-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #a8b4c8;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: #5eb1f5;
+  color: #5eb1f5;
+}
+
+.filter-btn-active {
+  background: #5eb1f5;
+  border-color: #5eb1f5;
+  color: #0a0f1e;
+}
+
 /* Status pills */
 .pill {
   display: inline-block;
@@ -539,7 +608,8 @@ margin-top: 0;
   font-size: 0.88rem;
   font-weight: 600;
   border: 1px solid;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .pill-ok {
@@ -613,6 +683,65 @@ margin-top: 0;
 .register-button:hover {
   background: #85c3f7;
   transform: translateY(-2px);
+}
+
+/* ---------- Disclaimer / Himbauan box ---------- */
+.disclaimer-box {
+  background: rgba(240, 180, 40, 0.08);
+  border: 1px solid rgba(240, 180, 40, 0.4);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.disclaimer-title {
+  color: #f0b428;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.disclaimer-text {
+  color: #d9c9a3;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Toggle indicator ▼▲ - hanya relevan/tampil di mobile */
+.disclaimer-toggle {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #d9c9a3;
+}
+
+@media (max-width: 720px) {
+  .disclaimer-box {
+    cursor: pointer;
+  }
+
+  .disclaimer-toggle {
+    display: inline;
+  }
+
+  .disclaimer-text {
+    display: none;
+  }
+
+  .disclaimer-expanded .disclaimer-text {
+    display: block;
+  }
 }
 
 /* ---------- Keterangan / info box ---------- */

@@ -26,6 +26,15 @@ export default function PaymentGatewayIDR() {
   return (
     <div className="page">
       <h1>List Payment Gateway - IDR</h1>
+      <div className="marquee-box">
+      <span className="marquee-text">
+      📢 🚨PG menggunakan jasa Pihak Ketiga 🚨 Mohon untuk tidak menjadikan PG sebagai rekening tampung 🚨
+Pembekuan UANG oleh Pihak Bank / Pihak Berwenang / Pihak PG ? 🚨
+Fraud QRIS & VA by member / Fraud by PG ? 
+⚠️⚠️⚠️⚠️⚠️⚠️ DI LUAR TANGGUNG JAWAB ENGINE ⚠️⚠️⚠️⚠️⚠️⚠️
+Semua Payment Gateway yang tersedia adalah sudah terverifikasi , NAMUN tetap terdapat kemungkinan akan adanya resiko yang tidak bisa diprediksi dan ENGINE tidak bertanggung jawab untuk hal ini
+      </span>
+</div>
       <div className="card table-card">
         <table className="pga-table">
           <thead>
