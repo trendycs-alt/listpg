@@ -186,9 +186,28 @@ export const idrProviders = [
     autoWithdraw: "Rp 1.700",
     preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA",
     },
-    
     {
     no: 19,
+    name: "FLAZZQRIS",
+    path: "/payment-gateway/idr/flazzqris",
+    Settlement: "H+1",
+    feeQris: "1.30 %",
+    feeVA: "No Support",
+    autoWithdraw: "Rp 1.800",
+    preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA",
+    },
+    {
+    no: 20,
+    name: "ZETPAY",
+    path: "/payment-gateway/idr/zetpay",
+    Settlement: "H+1",
+    feeQris: "1.30 %",
+    feeVA: "No Support",
+    autoWithdraw: "Rp 1.800",
+    preSettlement: "Tidak ada Biaya tambahan , Pinjaman 100% , Pendaftaran info ke grup PGA",
+    },
+    {
+    no: 21,
     name: "GRPAY",
     path: "/payment-gateway/idr/grpay",
     Settlement: "H+0",
@@ -198,7 +217,7 @@ export const idrProviders = [
     preSettlement: "Tidak ada Biaya tambahan , Settlement tersedia Setiap hari dengan sistem 4 Batch",
     },
     {
-    no: 20,
+    no: 22,
     name: "COIN2PAY (CRYPTO)",
     path: "/payment-gateway/idr/coin2pay",
     Settlement: "H+0",

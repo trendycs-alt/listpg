@@ -7,7 +7,6 @@ export const metadata = {
   description: "Payment gateway directory",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

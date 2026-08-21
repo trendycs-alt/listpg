@@ -8,6 +8,7 @@ function MenuItem({ item, onNavigate }) {
   const [open, setOpen] = useState(false);
   const hasChildren = Array.isArray(item.children) && item.children.length > 0;
   const isRegister = item.title === "Register";
+  const isExternal = item.path?.startsWith("http");
 
   return (
     <li
@@ -16,9 +17,22 @@ function MenuItem({ item, onNavigate }) {
       onMouseLeave={() => hasChildren && setOpen(false)}
     >
       {item.path ? (
-        <Link href={item.path} onClick={onNavigate}>
+        isExternal ? (
+         
+          <a
+          href={item.path}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onNavigate}
+          >
+
           {item.title}
-        </Link>
+        </a>
+      ) : (
+        <Link href={item.path} onClick={onNavigate}>
+            {item.title}
+          </Link>
+        )
       ) : (
         <span className="menu-label">{item.title}</span>
       )}

@@ -10,22 +10,19 @@ export const menu = [
     { title: "Global Market", path: "/payment-gateway/global" },
   ],
 },
+  { title: "BOT X24", path: "/BOTX24" },
   {
-    title: "Robot",
-    children: [{ title: "X24 Robot", path: "/robot/x24-robot" }],
-  },
-  {
-    title: "FAQ",
+    title: "Auto WD",
     children: [
-      { title: "Auto Withdraw", path: "/faq/auto-withdraw" },
-      { title: "Tips Withdraw", path: "/faq/tips-withdrawal" },
+      { title: "Guideline", path: "/autowd/guideline" },
+      { title: "Terms and Conditions", path: "/autowd/termsandconditions" },
     ],
   },
   {
     title: "Register",
     children: [
-      { title: "IDR Register", path: "/register/idr" },
-      { title: "Global Register", path: "/register/global" },
+      { title: "Register ( IDR )", path: "https://docs.google.com/forms/d/e/1FAIpQLSfoIt1sc3wzYZzx0_CPGlnwO5VuE942NW__kkujOafHzsdIrA/viewform" },
+      { title: "Register ( GLOBAL )", path: "https://docs.google.com/forms/d/e/1FAIpQLSdK5thxl0GAO09hbLPhPi8DpyGKUOFDyNVISGc9DeC8omc9zQ/viewform" },
     ],
   },
 ];

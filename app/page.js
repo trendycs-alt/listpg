@@ -43,7 +43,7 @@ function DisclaimerBox() {
     <p className="disclaimer-text">
 🚨PG menggunakan jasa Pihak Ketiga , Mohon untuk tidak menjadikan PG sebagai rekening tampung 🚨
 </p>
-  <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
+  <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
 Pembekuan UANG oleh Pihak Bank / Pihak Berwenang / Pihak PG ?
 </p>
   <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
@@ -61,7 +61,7 @@ Semua PG yang tersedia adalah sudah terverifikasi , NAMUN tetap terdapat kemungk
     <p className="disclaimer-text">
 🚨PG is using 3rd Party service , Please do not keep your money inside PG 🚨
 </p>
-  <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
+  <p className="disclaimer-text" style={{ marginTop: "1rem" }}>
 FREEZING OF FUNDS by the Bank / Relevant Authorities / PG ?
 </p>
   <p className="disclaimer-text" style={{ marginTop: "0.1rem" }}>
@@ -114,14 +114,14 @@ export default function Home() {
           <div className="menu-group group-faq">
             <div className="menu-title-row">
               <span className="menu-icon">🔺</span>
-              <Link href="/faq/auto-withdraw">Auto Withdraw Service - Payment Gateway</Link>
+              <Link href="/autowd/guideline">Auto Withdraw Service - Payment Gateway</Link>
             </div>
           </div>
 
           <div className="menu-group group-robot">
             <div className="menu-title-row">
               <span className="menu-icon">🤖</span>
-              <Link href="/robot/x24-robot">X24 ROBOT - Auto Deposit & Withdraw</Link>
+              <Link href="/BOTX24">X24 ROBOT - Auto Deposit & Withdraw</Link>
             </div>
             <div className="menu-link-row">
               <span className="menu-icon">👉</span>

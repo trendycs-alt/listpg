@@ -52,9 +52,8 @@ export default function PaymentGatewayGlobal() {
       : globalProviders.filter((p) => p.Currency === selectedCurrency);
 
   return (
-    <div className="page">
-      <h1>Payment Gateway List - GLOBAL</h1>
-      <div className="marquee-box">
+    <>
+    <div className="marquee-box">
       <span className="marquee-text">
       📢 🚨PG is using 3rd Party service 🚨 Please do not keep your money inside PG 🚨
             FREEZING OF FUNDS by the Bank / Relevant Authorities / PG ? 🚨
@@ -63,6 +62,9 @@ export default function PaymentGatewayGlobal() {
             All available Payment Gateway have been verified. HOWEVER, there is still a possibility of unforeseen risks, and ENGINE shall not be held responsible for any losses or issues arising from such risks
       </span>
 </div>
+
+    <div className="page">
+      <h1>Payment Gateway List - GLOBAL</h1>
       <div className="currency-filter">
         {currencyList.map((cur) => (
           <button
@@ -171,5 +173,6 @@ export default function PaymentGatewayGlobal() {
         </div>
       </div>
     </div>
+  </>
   );
 }
